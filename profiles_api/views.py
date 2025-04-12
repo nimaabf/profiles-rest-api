@@ -23,3 +23,15 @@ class HelloApiView(APIView):
             return Response({'message': message})
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def put(self, request, pk=none):
+        # put functionality
+        return Response({'method': "PUT"})
+
+    def patch(self, request, pk=none):
+        # put functionality
+        return Response({'method': "PATCH"})
+
+    def delete(self, request, pk=none):
+        # put functionality
+        return Response({'method': "DELETE"})
